@@ -40,11 +40,11 @@ unsigned int nethunter_mode = 0;
 static int __init read_nethunter_state(char *s)
 {
 	if (s)
-		enable_ksu = simple_strtoul(s, NULL, 0);
+		nethunter_mode = simple_strtoul(s, NULL, 0);
 
 	return 1;
 }
-__setup("nh_mode=", read_kernelsu_state);
+__setup("nh_mode=", read_nethunter_state);
 
 static void remove_uid_from_arr(uid_t uid)
 {
